@@ -1,0 +1,33 @@
+{
+  "name": "tooltrace-designer",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Open reimplementation of the tooltrace.ai designer: photo -> scaled tool outlines -> foam / Gridfinity inserts",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit -p tsconfig.json && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "clipper-lib": "^6.4.2",
+    "earcut": "^3.0.0",
+    "fflate": "^0.8.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "three": "^0.186.0",
+    "zustand": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/earcut": "^3.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@types/three": "^0.186.0",
+    "@vitejs/plugin-react": "^6.0.0",
+    "typescript": "^5.7.0",
+    "vite": "^8.0.0",
+    "vitest": "^5.0.0"
+  }
+}

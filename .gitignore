@@ -17,3 +17,9 @@ env/
 *.log
 .DS_Store
 Thumbs.db
+
+# node
+node_modules/
+dist/
+*.tsbuildinfo
+.e2e/
