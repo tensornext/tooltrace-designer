@@ -32,7 +32,7 @@ export default function App() {
         </nav>
         <div className="row">
           <button className="btn small" onClick={() => { if (!source || confirm('Start over? Your traced tools will be lost.')) reset(); }}>New design</button>
-          <a className="btn small" href="https://github.com/heavymidget/tooltrace-designer" target="_blank" rel="noreferrer">Source</a>
+          <a className="btn small" href="https://github.com/tensornext/tooltrace-designer" target="_blank" rel="noreferrer">Source</a>
         </div>
       </header>
       <main className="content">
