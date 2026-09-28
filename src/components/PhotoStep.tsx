@@ -48,7 +48,12 @@ export default function PhotoStep() {
         onClick={() => inputRef.current?.click()}
       >
         <input ref={inputRef} type="file" accept="image/*" hidden onChange={(e) => void load(e.target.files?.[0])} />
-        <div className="dz-icon">📷</div>
+        <div className="dz-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M3 8.5A1.5 1.5 0 0 1 4.5 7h2.2a1.5 1.5 0 0 0 1.25-.67l.6-.9A1.5 1.5 0 0 1 9.8 4.8h4.4a1.5 1.5 0 0 1 1.25.67l.6.9A1.5 1.5 0 0 0 17.3 7h2.2A1.5 1.5 0 0 1 21 8.5v9a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5z" />
+            <circle cx="12" cy="13" r="3.2" />
+          </svg>
+        </div>
         <h2>{busy ? 'Reading photo…' : 'Drop a photo here, or click to choose'}</h2>
         <p>JPG, PNG or HEIC-converted photos. Shot straight from above, with a sheet of paper in frame.</p>
         <div className="row">
