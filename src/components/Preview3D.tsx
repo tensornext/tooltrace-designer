@@ -18,7 +18,7 @@ export default function Preview3D({ mesh }: { mesh: TriMesh | null }) {
     camera.position.set(120, -160, 140);
     const controls = new OrbitControls(camera, renderer.domElement);
     controls.enableDamping = true;
-    scene.add(new THREE.HemisphereLight(0xffffff, 0x334455, 1.1));
+    scene.add(new THREE.HemisphereLight(0xffffff, 0x222530, 1.1));
     const dir = new THREE.DirectionalLight(0xffffff, 1.2); dir.position.set(100, -80, 200); scene.add(dir);
     const grid = new THREE.GridHelper(420, 10, 0x334, 0x223); grid.rotation.x = Math.PI / 2; scene.add(grid);
     sceneRef.current = { scene, camera, renderer, controls, obj: null };
@@ -41,7 +41,7 @@ export default function Preview3D({ mesh }: { mesh: TriMesh | null }) {
     const geo = new THREE.BufferGeometry();
     geo.setAttribute('position', new THREE.Float32BufferAttribute(new Float32Array(mesh.tris), 3));
     geo.computeVertexNormals();
-    const mat = new THREE.MeshStandardMaterial({ color: 0x4cc9f0, roughness: 0.55, metalness: 0.05, flatShading: true });
+    const mat = new THREE.MeshStandardMaterial({ color: 0xCACFD8, roughness: 0.55, metalness: 0.05, flatShading: true });
     const obj = new THREE.Mesh(geo, mat);
     s.scene.add(obj); s.obj = obj;
     const b = mesh.bounds();
