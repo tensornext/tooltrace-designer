@@ -59,12 +59,12 @@ export default function ScaleStep() {
       ctx.beginPath();
       pts.forEach((p, i) => (i ? ctx.lineTo(p.x, p.y) : ctx.moveTo(p.x, p.y)));
       if (pts.length === 4) ctx.closePath();
-      ctx.strokeStyle = '#4cc9f0'; ctx.stroke();
+      ctx.strokeStyle = '#DDB07C'; ctx.stroke();
       if (pts.length === 4) { ctx.fillStyle = 'rgba(76,201,240,0.12)'; ctx.fill(); }
     }
     pts.forEach((p, i) => {
       ctx.beginPath(); ctx.arc(p.x, p.y, r, 0, Math.PI * 2);
-      ctx.fillStyle = '#4cc9f0'; ctx.fill(); ctx.strokeStyle = '#08222c'; ctx.stroke();
+      ctx.fillStyle = '#DDB07C'; ctx.fill(); ctx.strokeStyle = '#23201D'; ctx.stroke();
       ctx.fillStyle = '#fff'; ctx.font = `${12 / view.scale}px system-ui`; ctx.fillText(String(i + 1), p.x + r * 1.3, p.y - r * 0.6);
     });
     if (pts.length < 4 && hover) {
