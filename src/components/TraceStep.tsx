@@ -69,7 +69,7 @@ export default function TraceStep() {
 
   const draw = useCallback((ctx: CanvasRenderingContext2D, view: View) => {
     if (rect.bitmap && showImage) ctx.drawImage(rect.bitmap, 0, 0);
-    else { ctx.fillStyle = '#1b1d22'; ctx.fillRect(0, 0, rect.width, rect.height); }
+    else { ctx.fillStyle = '#171513'; ctx.fillRect(0, 0, rect.width, rect.height); }
     // paper rectangle
     ctx.strokeStyle = 'rgba(76,201,240,0.7)'; ctx.lineWidth = 1.5 / view.scale; ctx.setLineDash([6 / view.scale, 4 / view.scale]);
     ctx.strokeRect(rect.paperPx.x, rect.paperPx.y, rect.paperPx.w, rect.paperPx.h); ctx.setLineDash([]);
@@ -84,7 +84,7 @@ export default function TraceStep() {
         const r = 6 / view.scale;
         ctx.beginPath(); ctx.arc(m.x, m.y, r, 0, Math.PI * 2);
         ctx.fillStyle = m.positive ? t.color : '#111'; ctx.fill();
-        ctx.strokeStyle = m.positive ? '#fff' : '#ff5c5c'; ctx.lineWidth = 1.5 / view.scale; ctx.stroke();
+        ctx.strokeStyle = m.positive ? '#fff' : '#E2A597'; ctx.lineWidth = 1.5 / view.scale; ctx.stroke();
         if (!m.positive) { ctx.beginPath(); ctx.moveTo(m.x - r * 0.5, m.y); ctx.lineTo(m.x + r * 0.5, m.y); ctx.stroke(); }
       }
     }
