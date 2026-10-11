@@ -32,8 +32,8 @@ export default function LayoutStep() {
     const lw = 1 / view.scale;
     // container
     ctx.beginPath(); design.outline.forEach((p, i) => (i ? ctx.lineTo(p.x, p.y) : ctx.moveTo(p.x, p.y))); ctx.closePath();
-    ctx.fillStyle = s.mode === 'gridfinity' ? '#312E2A' : '#45413C'; ctx.fill();
-    ctx.strokeStyle = '#BFB8AF'; ctx.lineWidth = 2 * lw; ctx.stroke();
+    ctx.fillStyle = s.mode === 'gridfinity' ? '#2a3140' : '#3a3630'; ctx.fill();
+    ctx.strokeStyle = '#8fa3bf'; ctx.lineWidth = 2 * lw; ctx.stroke();
     // grid cells for gridfinity
     if (s.mode === 'gridfinity') {
       ctx.strokeStyle = 'rgba(143,163,191,0.25)'; ctx.lineWidth = lw; ctx.setLineDash([3 * lw, 3 * lw]);
@@ -55,7 +55,7 @@ export default function LayoutStep() {
       ctx.fillStyle = '#fff'; ctx.font = `${Math.max(3, 11 * lw)}px system-ui`; ctx.textAlign = 'center'; ctx.fillText(p.tool.name, c.x, c.y);
     }
     // dimensions
-    ctx.fillStyle = '#BFB8AF'; ctx.font = `${Math.max(3, 11 * lw)}px system-ui`; ctx.textAlign = 'left';
+    ctx.fillStyle = '#9fb0c8'; ctx.font = `${Math.max(3, 11 * lw)}px system-ui`; ctx.textAlign = 'left';
     ctx.fillText(`${design.width.toFixed(1)} × ${design.height.toFixed(1)} mm`, 0, -6 * lw);
   }, [design, s.mode, s.gridfinity, selected]);
 
