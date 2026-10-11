@@ -3,7 +3,6 @@ import PhotoStep from './components/PhotoStep';
 import ScaleStep from './components/ScaleStep';
 import TraceStep from './components/TraceStep';
 import LayoutStep from './components/LayoutStep';
-import Logo from './components/Logo';
 
 export default function App() {
   const step = useDesigner((s) => s.step);
@@ -23,7 +22,7 @@ export default function App() {
   return (
     <div className="app">
       <header className="topbar">
-        <div className="brand"><Logo height={22} /> <span className="badge">Open reimplementation</span></div>
+        <div className="brand"><span className="logo">◱</span> Tooltrace <span className="muted">Designer</span> <span className="badge">open reimplementation</span></div>
         <nav className="steps">
           {STEPS.map((s, i) => (
             <button key={s.id} className={`step ${step === s.id ? 'current' : ''} ${enabled[s.id] ? '' : 'disabled'}`} disabled={!enabled[s.id]} onClick={() => setStep(s.id)} title={s.hint}>
